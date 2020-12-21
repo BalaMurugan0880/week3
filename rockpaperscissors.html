@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+<button onclick="select('Rock')">Rock</button>
+<button onclick="select('Paper')">Paper</button>
+<button onclick="select('Scissors')">Scissors</button>
+
+<script>
+   var weapons = ["Rock","Scissors","Paper"];
+var myScore = 0;
+var compScore = 0;
+
+function select(weapon){
+  var computerSelection = Math.floor(Math.random()*3);
+  var compWeapon = weapons[computerSelection]
+  
+  if (weapon == "Rock"){
+    
+    if(compWeapon == "Rock"){
+      alert("Computer select " +compWeapon+ ". It's a draw! Current score, You"+myScore + " : Computer" +compScore);
+    }else if(compWeapon == "Paper"){
+      compScore++;
+      alert("Computer select " +compWeapon+ ". It's a lose! Current score, You"+myScore + " : Computer" +compScore);
+    }else{
+      myScore++;
+       alert("Computer select " +compWeapon+ ". It's a Win! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    
+  }
+  
+  if (weapon == "Paper"){
+    
+    if(compWeapon == "Paper"){
+      alert("Computer select "+compWeapon+". It's a draw! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    else if(compWeapon == "Rock"){
+       compScore++;
+       alert("Computer select "+compWeapon+". It's a lose! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    else{
+      myScore++;
+       alert("Computer select "+compWeapon+". It's a Win! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    
+  }
+  
+  if (weapon == "Scissors"){
+    
+    if(compWeapon == "Scissors"){
+      alert("Computer select "+compWeapon+". It's a draw! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    else if(compWeapon == "Rock"){
+      compScore++;
+       alert("Computer select "+compWeapon+". It's a lose! Current score, You"+myScore + " : Computer" +compScore);
+    }
+    else{
+      myScore++;
+       alert("Computer select "+compWeapon+". It's a Win! Current score, You"+myScore + " : Computer" +compScore);
+    }
+  }
+  
+}
+</script>
+</body>
+</html>
